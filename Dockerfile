@@ -1,16 +1,14 @@
-# Use an official PHP image with an Apache web server as a base
-# This image includes PHP and Apache, pre-configured to work together.
+# Use an official PHP image with Apache
 FROM php:8.2-apache
 
-# Set the working directory to Apache's default web root
+# Set the working directory inside the container
 WORKDIR /var/www/html
 
-# Copy the application files from your project directory into the container.
-# This command assumes your Dockerfile is in the same directory as your project files.
-# It copies the 'index.php' file and the entire 'assets' directory.
+# Copy the index.php file into the container
 COPY index.php .
+
+# Copy the assets folder into the container (if it exists)
 COPY assets/ ./assets/
 
-# The Apache server inside the container listens on port 80 by default.
-# This line informs Docker that the container will listen on this port at runtime.
+# Expose port 80 (Apache's default)
 EXPOSE 80
