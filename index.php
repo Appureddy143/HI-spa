@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serene Spa - Your Oasis of Tranquility</title>
+    <title>Haven International Spa - Your Oasis of Tranquility</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -14,8 +14,8 @@
         .font-playfair {
             font-family: 'Playfair Display', serif;
         }
-        .hero-bg {
-            background-image: url('https://i.imgur.com/sAV1xSt.jpeg'); /* New Hero Image */
+.hero-bg {
+    background-image: url('assets/back.png');
         }
         .gallery-img {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -34,12 +34,6 @@
 
     <!-- Preloader -->
     <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white flex justify-center items-center z-[100]">
-        <!-- 
-            IMPORTANT: 
-            1. Create a folder named 'assets' in the same directory as this index.php file.
-            2. Place your loading GIF inside the 'assets' folder.
-            3. Make sure the GIF is named 'loader.gif' or update the src path below.
-        -->
         <img src="assets/loader.gif" alt="Loading animation" class="w-32 h-32 rounded-full object-cover shadow-lg">
     </div>
 
@@ -47,9 +41,8 @@
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 text-2xl font-playfair font-bold text-gray-800">
-                <!-- IMPORTANT: Replace this src with the path to your logo -->
-                <img src="https://github.com/Appureddy143/HI-spa/blob/main/assets/logo.png?raw=true" alt="Serene Spa Logo" class="h-8 w-8"> <!-- New Logo -->
-                <span>Serene Spa</span>
+                <img src="assets/logo.png" alt="Haven International Spa Logo" class="h-8 w-8">
+                <span>Haven International Spa</span>
             </a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-600 hover:text-green-700 transition duration-300">Home</a>
@@ -92,7 +85,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service Card 1 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://github.com/Appureddy143/HI-spa/blob/main/assets/gfgdfgfgf.png?raw=true" alt="Swedish Massage" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://github.com/Appureddy143/HI-spa/blob/main/assets/gfgdfgfgf.png?raw=true" alt="Swedish Massage" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Swedish Massage</h3>
                             <p class="text-gray-600">A classic relaxing massage to ease muscle tension and improve circulation.</p>
@@ -100,7 +93,7 @@
                     </div>
                     <!-- Service Card 2 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.imgur.com/k2oWpYJ.jpeg" alt="Aromatherapy" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" alt="Aromatherapy" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Aromatherapy</h3>
                             <p class="text-gray-600">Uses essential oils to promote healing and a feeling of well-being.</p>
@@ -108,7 +101,7 @@
                     </div>
                     <!-- Service Card 3 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.imgur.com/pYqD4Yf.jpeg" alt="Hot Stone Therapy" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1974&auto=format&fit=crop" alt="Hot Stone Therapy" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Hot Stone Therapy</h3>
                             <p class="text-gray-600">Heated stones are placed on the body to soothe muscles and relieve stress.</p>
@@ -116,7 +109,7 @@
                     </div>
                     <!-- Service Card 4 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.imgur.com/7gK5pSM.jpeg" alt="Deep Tissue Massage" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Deep Tissue Massage" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Deep Tissue Massage</h3>
                             <p class="text-gray-600">Targets deeper layers of muscle to release chronic knots and tension.</p>
@@ -124,7 +117,7 @@
                     </div>
                     <!-- Service Card 5 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.imgur.com/3fM0Y4m.jpeg" alt="Rejuvenating Facial" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Rejuvenating Facial" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Rejuvenating Facial</h3>
                             <p class="text-gray-600">A custom facial to cleanse, exfoliate, and nourish the skin for a radiant glow.</p>
@@ -132,7 +125,7 @@
                     </div>
                     <!-- Service Card 6 -->
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://i.imgur.com/oWfQ2h2.jpeg" alt="Couples Package" class="w-full h-48 object-cover"> <!-- New Service Image -->
+                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2070&auto=format&fit=crop" alt="Couples Package" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Couples Package</h3>
                             <p class="text-gray-600">Enjoy a relaxing massage side-by-side with a partner in our private suite.</p>
@@ -146,12 +139,12 @@
         <section id="about" class="py-20 bg-green-50">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://i.imgur.com/rB0QY7B.jpeg" alt="Spa Interior" class="rounded-lg shadow-xl w-full"> <!-- New About Image -->
+                    <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2070&auto=format&fit=crop" alt="Spa Interior" class="rounded-lg shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-playfair font-bold text-gray-800 mb-4">Your Sanctuary for Wellness</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Welcome to Serene Spa, where we believe in the power of touch and the art of relaxation. Our mission is to provide a peaceful escape from the demands of everyday life. Our team of certified therapists is dedicated to creating a personalized wellness experience that addresses your unique needs, leaving you feeling refreshed, renewed, and completely at ease.
+                        Welcome to Haven International Spa, where we believe in the power of touch and the art of relaxation. Our mission is to provide a peaceful escape from the demands of everyday life. Our team of certified therapists is dedicated to creating a personalized wellness experience that addresses your unique needs, leaving you refreshed, renewed, and completely at ease.
                     </p>
                     <p class="text-gray-600 leading-relaxed">
                         We use only the finest natural and organic products, ensuring a treatment that is as kind to the earth as it is to your body.
@@ -169,20 +162,20 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/eG9Vwea.jpeg" alt="Gallery Image 1"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/5zL8tqL.jpeg" alt="Gallery Image 2"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g1.png" alt="Gallery Image 1"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g2.png" alt="Gallery Image 2"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/XqJ9gL9.jpeg" alt="Gallery Image 3"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/QkQW2rT.jpeg" alt="Gallery Image 4"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1964&auto=format&fit=crop" alt="Gallery Image 3"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1507034589631-9433cc6bc453?q=80&w=1968&auto=format&fit=crop" alt="Gallery Image 4"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/rNfTfWc.jpeg" alt="Gallery Image 5"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/9wW8wZf.jpeg" alt="Gallery Image 6"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g3.png" alt="Gallery Image 5"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g4.png" alt="Gallery Image 6"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/3d7fJp7.jpeg" alt="Gallery Image 7"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://i.imgur.com/sAV1xSt.jpeg" alt="Gallery Image 8"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g5.png" alt="Gallery Image 7"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g5.png" alt="Gallery Image 8"></div>
                     </div>
                 </div>
             </div>
@@ -215,6 +208,8 @@
                                  <option>Aromatherapy</option>
                                  <option>Hot Stone Therapy</option>
                                  <option>Deep Tissue Massage</option>
+                                 <option>Rejuvenating Facial</option>
+                                 <option>Couples Package</option>
                              </select>
                         </div>
                         <div>
@@ -233,28 +228,28 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-2xl font-playfair font-bold mb-4">Serene Spa</p>
+            <p class="text-2xl font-playfair font-bold mb-4">Haven International Spa</p>
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="#" class="hover:text-green-400">Facebook</a>
                 <a href="#" class="hover:text-green-400">Instagram</a>
                 <a href="#" class="hover:text-green-400">Twitter</a>
             </div>
-            <p class="text-gray-400">&copy; 2024 Serene Spa. All Rights Reserved.</p>
+            <p class="text-gray-400">&copy; <?php echo date("Y"); ?> Haven International Spa. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- Floating Action Buttons -->
     <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-4">
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/911234567890?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
+        <a href="https://wa.me/918341155660?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.654 4.505 1.916 6.364l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.371c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413z"/>
             </svg>
         </a>
         <!-- Call Button -->
-        <a href="tel:+911234567890" title="Call Us" class="bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
+        <a href="tel:+918341155660" title="Call Us" class="bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2G-1-2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
         </a>
     </div>
@@ -268,7 +263,7 @@
                 // Hide it after the transition
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                }, 500); 
+                }, 500);
             }
         });
 
@@ -284,7 +279,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 // If it's a mobile menu link, close the menu first
                 if (mobileMenu.contains(this)) {
                     mobileMenu.classList.add('hidden');
@@ -308,9 +303,9 @@
                 alert('Please fill in your Name, Email, and select a Service.');
                 return;
             }
-            
-            // IMPORTANT: Replace with your actual WhatsApp number including the country code, but without '+' or '00'.
-            const phoneNumber = '911234567890'; 
+
+            // IMPORTANT: Replace with your actual WhatsApp number
+            const phoneNumber = '8341155660';
 
             let inquiryMessage = `Hello! I would like to make an inquiry from your website.\n\n`;
             inquiryMessage += `*Name:* ${name}\n`;
