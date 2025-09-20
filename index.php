@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy: A critical security layer to prevent XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.tailwindcss.com; 
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
+        font-src 'self' https://fonts.gstatic.com; 
+        img-src 'self' https://images.unsplash.com;
+        frame-ancestors 'none';
+    ">
     <title>Haven International Spa - Your Oasis of Tranquility</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -14,8 +23,8 @@
         .font-playfair {
             font-family: 'Playfair Display', serif;
         }
-.hero-bg {
-    background-image: url('assets/back.png');
+        .hero-bg {
+            background-image: url('assets/back.png');
         }
         .gallery-img {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -234,7 +243,8 @@
                 <a href="#" class="hover:text-green-400">Instagram</a>
                 <a href="#" class="hover:text-green-400">Twitter</a>
             </div>
-            <p class="text-gray-400">&copy; <?php echo date("Y"); ?> Haven International Spa. All Rights Reserved.</p>
+            <!-- Replaced PHP with JavaScript for dynamic year - safer for static HTML -->
+            <p class="text-gray-400">&copy; <span id="current-year"></span> Haven International Spa. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -249,7 +259,7 @@
         <!-- Call Button -->
         <a href="tel:+918341155660" title="Call Us" class="bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2G-1-2h-1C9.716 21 3 14.284 3 6V5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
         </a>
     </div>
@@ -320,6 +330,9 @@
 
             window.open(whatsappUrl, '_blank');
         });
+        
+        // Sets the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
 </body>
