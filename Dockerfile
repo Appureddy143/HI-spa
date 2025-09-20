@@ -1,15 +1,14 @@
-# Use official PHP image with Apache
 FROM php:8.2-apache
 
-# Set the working directory to Apache's web root
+# Copy all your site files (including PHP and assets)
 WORKDIR /var/www/html
+COPY . .
 
-# Copy your PHP files and assets into the container
-COPY index.php .
-COPY assets/ ./assets/
-
-# Enable Apache modules (optional, e.g. mod_rewrite)
+# Optional: enable Apache rewrite module if needed
 RUN a2enmod rewrite
 
-# Expose the default Apache port
+# Set correct permissions (if needed)
+# but often not needed inside container since files are copied by root
+# You can also add e.g. RUN chown -R www-data:www-data /var/www/html
+
 EXPOSE 80
