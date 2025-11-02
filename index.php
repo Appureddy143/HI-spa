@@ -205,27 +205,27 @@
 
         <div class="services-grid">
           <article class="card reveal">
-            <img src="assets/s1.png" alt="Swedish Massage" loading="lazy">
+            <img src="assets/s1.jpeg" alt="Swedish Massage" loading="lazy">
             <div class="card-body"><h3>Swedish Massage</h3><p>A classic relaxing massage to ease muscle tension and improve circulation.</p></div>
           </article>
 
           <article class="card reveal">
-            <img src="assets/s2.png" alt="Aromatherapy" loading="lazy">
+            <img src="assets/s2.jpg" alt="Aromatherapy" loading="lazy">
             <div class="card-body"><h3>Aromatherapy</h3><p>Uses essential oils to promote healing and a feeling of well-being.</p></div>
           </article>
 
           <article class="card reveal">
-            <img src="assets/s3.png" alt="Hot Stone Therapy" loading="lazy">
+            <img src="assets/s3.jpeg.webp" alt="Hot Stone Therapy" loading="lazy">
             <div class="card-body"><h3>Hot Stone Therapy</h3><p>Heated stones are placed on the body to soothe muscles and relieve stress.</p></div>
           </article>
 
           <article class="card reveal">
-            <img src="assets/s4.png" alt="Deep Tissue Massage" loading="lazy">
+            <img src="assets/s4.jpg" alt="Deep Tissue Massage" loading="lazy">
             <div class="card-body"><h3>Deep Tissue Massage</h3><p>Targets deeper layers of muscle to release chronic knots and tension.</p></div>
           </article>
 
           <article class="card reveal">
-            <img src="assets/s5.png" alt="Rejuvenating Facial" loading="lazy">
+            <img src="assets/s5.jpg" alt="Rejuvenating Facial" loading="lazy">
             <div class="card-body"><h3>Rejuvenating Facial</h3><p>A custom facial to cleanse, exfoliate, and nourish the skin for a radiant glow.</p></div>
           </article>
 
