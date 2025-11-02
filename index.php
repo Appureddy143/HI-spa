@@ -15,8 +15,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://example.com/" />
   <!-- If you have an open graph image, replace with local path or URL -->
-  <meta property="og:image" content="Assets/back.png" />
+  <meta property="og:image" content="assets/back.png" />
   <meta name="robots" content="index, follow" />
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https://images.unsplash.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src https://fonts.gstatic.com;
+  script-src 'self' https://cdn.tailwindcss.com;">
 
   <!-- ========== Content Security Policy (offline / self-contained) ========== -->
   <!-- Note: we allow 'unsafe-inline' here because the page is self-contained and must run inline scripts/styles offline -->
