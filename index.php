@@ -59,12 +59,8 @@
 }
 
 /* Reset-ish */
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
   background: var(--bg);
@@ -117,7 +113,6 @@ header.site-header {
   font-weight: 700;
 }
 
-/* Navigation */
 nav.desktop {
   display: flex;
   gap: 18px;
@@ -132,7 +127,7 @@ nav.desktop a:hover {
   color: var(--accent);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   height: 100vh;
   display: flex;
@@ -180,24 +175,15 @@ nav.desktop a:hover {
 }
 
 /* Sections */
-section {
-  padding: 64px 0;
-}
+section { padding: 64px 0; }
 .section-title {
   font-family: "Playfair Display", serif;
   font-size: 28px;
   margin: 0 0 8px;
 }
-.muted {
-  color: var(--muted);
-}
-.grid {
-  display: grid;
-  gap: 20px;
-}
-.services-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
+.muted { color: var(--muted); }
+.grid { display: grid; gap: 20px; }
+.services-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card {
   background: var(--card);
   border-radius: 12px;
@@ -210,27 +196,13 @@ section {
   object-fit: cover;
   display: block;
 }
-.card .card-body {
-  padding: 16px;
-}
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-.card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
+.card .card-body { padding: 16px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
 
 /* Gallery */
-.gallery-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-.gallery-grid .col {
-  display: grid;
-  gap: 12px;
-}
+.gallery-grid { grid-template-columns: repeat(2, 1fr); }
+.gallery-grid .col { display: grid; gap: 12px; }
 .gallery-grid img {
   width: 100%;
   height: auto;
@@ -255,11 +227,7 @@ section {
   flex-direction: column;
   gap: 8px;
 }
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="time"],
-select {
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], select {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #e6e7eb;
@@ -296,15 +264,9 @@ footer {
   box-shadow: 0 10px 24px rgba(2, 6, 23, 0.12);
   transition: transform .14s;
 }
-.fab:active {
-  transform: scale(.98);
-}
-.fab.wh {
-  background: #25D366; /* WhatsApp green */
-}
-.fab.call {
-  background: #0ea5e9; /* Call blue */
-}
+.fab:active { transform: scale(.98); }
+.fab.wh { background: #25D366; } /* whatsapp green */
+.fab.call { background: #0ea5e9; } /* call blue */
 
 /* ===== MOBILE MENU BASE ===== */
 #mobileMenu {
@@ -322,11 +284,15 @@ footer {
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* Show menu */
 #mobileMenu.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
 }
+
+/* Menu links */
 #mobileMenu a {
   display: block;
   padding: 10px 0;
@@ -339,6 +305,8 @@ footer {
   color: #166534;
   transform: translateX(5px);
 }
+
+/* Dark mode support */
 body.dark #mobileMenu {
   background: #1e1e1e;
 }
@@ -346,39 +314,7 @@ body.dark #mobileMenu a {
   color: #f1f1f1;
 }
 
-/* Mobile Toggle Button */
-#menuToggle {
-  font-size: 1.6rem;
-  cursor: pointer;
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-#menuToggle:hover {
-  transform: scale(1.1);
-  color: var(--accent);
-}
-
-/* Dark/Light Toggle */
-#themeToggle {
-  font-size: 1.5rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: var(--text);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-#themeToggle:hover {
-  transform: scale(1.1);
-  color: var(--accent);
-}
-body.dark #themeToggle {
-  color: #f1f1f1;
-}
-
-/* Preloader */
+/* Preloader (CSS spinner) */
 #preloader {
   position: fixed;
   inset: 0;
@@ -407,12 +343,10 @@ body.dark #themeToggle {
   animation: spin 1.1s linear infinite;
 }
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
-/* Utilities */
+/* Small utilities */
 .text-center { text-align: center; }
 .mb-4 { margin-bottom: 16px; }
 .mb-6 { margin-bottom: 24px; }
@@ -434,9 +368,8 @@ body.dark #themeToggle {
   .row { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   nav.desktop { display: none; }
-  #menuToggle { display: inline-block; }
+  .mobile-btn { display: inline-block; }
 }
-  
   </style>
   <script>
 document.addEventListener("DOMContentLoaded", () => {
