@@ -144,6 +144,85 @@
       .mobile-btn{display:inline-block}
     }
   </style>
+  <style>
+  /* ===== MOBILE MENU STYLING ===== */
+  #mobileMenu {
+    background: var(--card, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 12px 20px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  /* When active, show smoothly */
+  #mobileMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  #mobileMenu a {
+    display: block;
+    padding: 10px 0;
+    color: var(--text, #333);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  #mobileMenu a:hover {
+    color: #166534; /* Spa green tone */
+    transform: translateX(5px);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  </style>
+  <script>
+  const menuBtn = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('active')) {
+        // play slide up animation before hiding
+        mobileMenu.style.animation = 'slideUp 0.3s ease forwards';
+        setTimeout(() => mobileMenu.classList.remove('active'), 300);
+      } else {
+        mobileMenu.classList.add('active');
+        mobileMenu.style.animation = 'slideDown 0.3s ease forwards';
+      }
+    });
+  }
+  </script>
 </head>
 <body>
 
