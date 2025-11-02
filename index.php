@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Re-added Content Security Policy for security -->
+    <!-- Updated Content Security Policy to allow placeholder images -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self'; 
         script-src 'self' https://cdn.tailwindcss.com; 
         style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
         font-src 'self' https://fonts.gstatic.com; 
-        img-src 'self' https://images.unsplash.com;
+        img-src 'self' https://images.unsplash.com https://placehold.co;
         frame-ancestors 'none';
     ">
     <title>Haven International Spa - Your Oasis of Tranquility</title>
@@ -23,8 +23,9 @@
         .font-playfair {
             font-family: 'Playfair Display', serif;
         }
+        /* Replaced local hero image with a live URL */
         .hero-bg {
-            background-image: url('assets/back.png');
+            background-image: url('https://images.unsplash.com/photo-1544161515-cfd696dba485?q=80&w=2070&auto=format&fit=crop');
         }
         .gallery-img {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -42,13 +43,15 @@
 <body class="bg-gray-50 text-gray-800">
 
     <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-white flex justify-center items-center z-[100]">
-        <img src="assets/loader.gif" alt="Loading animation" class="w-32 h-32 rounded-full object-cover shadow-lg">
+        <!-- Replaced local loader GIF with a live placeholder -->
+        <img src="https://placehold.co/128x128/ffffff/166534?text=Loading..." alt="Loading animation" class="w-32 h-32 rounded-full object-cover shadow-lg">
     </div>
 
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 text-2xl font-playfair font-bold text-gray-800">
-                <img src="assets/logo.png" alt="Haven International Spa Logo" class="h-8 w-8">
+                <!-- Replaced local logo with a live placeholder -->
+                <img src="https://placehold.co/32x32/166534/ffffff?text=H" alt="Haven International Spa Logo" class="h-8 w-8 rounded-full">
                 <span>Haven International Spa</span>
             </a>
             <nav class="hidden md:flex space-x-8">
@@ -88,7 +91,8 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-                        <img src="assets/l1.png" alt="Swedish Massage" class="w-full h-48 object-cover">
+                        <!-- Replaced local image with a live URL -->
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f31c83659?q=80&w=2070&auto=format&fit=crop" alt="Swedish Massage" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Swedish Massage</h3>
                             <p class="text-gray-600">A classic relaxing massage to ease muscle tension and improve circulation.</p>
@@ -158,20 +162,23 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g1.png" alt="Gallery Image 1"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g2.png" alt="Gallery Image 2"></div>
+                        <!-- Replaced local images with live URLs -->
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1599351548092-93c6918a3646?q=80&w=1974&auto=format&fit=crop" alt="Gallery Image 1"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1542634239-650c4a48b570?q=80&w=1964&auto=format&fit=crop" alt="Gallery Image 2"></div>
                     </div>
                     <div class="grid gap-4">
                         <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1964&auto=format&fit=crop" alt="Gallery Image 3"></div>
                         <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1507034589631-9433cc6bc453?q=80&w=1968&auto=format&fit=crop" alt="Gallery Image 4"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g3.png" alt="Gallery Image 5"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g4.png" alt="Gallery Image 6"></div>
+                        <!-- Replaced local images with live URLs -->
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1570172619642-3a5e8e3d3a6e?q=80&w=2070&auto=format&fit=crop" alt="Gallery Image 5"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028269?q=80&w=2070&auto=format&fit=crop" alt="Gallery Image 6"></div>
                     </div>
                     <div class="grid gap-4">
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g5.png" alt="Gallery Image 7"></div>
-                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="assets/g5.png" alt="Gallery Image 8"></div>
+                        <!-- Replaced local images with live URLs -->
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1558611002-99c73e25d23c?q=80&w=2070&auto=format&fit=crop" alt="Gallery Image 7"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1616394584738-FC6e6fb3e190?q=80&w=2070&auto=format&fit=crop" alt="Gallery Image 8"></div>
                     </div>
                 </div>
             </div>
@@ -246,7 +253,7 @@
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.891-11.893 11.891-1.996 0-3.903-.52-5.586-1.455L.057 24zM6.591 19.911l.3.181c1.559.936 3.303 1.428 5.109 1.428 5.462 0 9.904-4.443 9.904-9.904 0-5.461-4.442-9.904-9.904-9.904-5.461 0-9.904 4.443-9.904 9.904 0 1.84.49 3.582 1.396 5.093l.203.341-1.015 3.714 3.79-1.003z"/>
             </svg>
         </a>
-        <!-- Call Button - ADDED BACK -->
+        <!-- Call Button -->
         <a href="tel:+919108238201" title="Call Us" class="bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -258,14 +265,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             
             // --- 1. Preloader Functionality ---
-            // Use 'load' to wait for all resources (like images) to be loaded
             window.addEventListener('load', () => {
                 const preloader = document.getElementById('preloader');
                 if (preloader) {
-                    // Start the fade-out
                     preloader.style.opacity = '0';
-                    
-                    // After the fade-out (500ms from CSS), set display to none
                     setTimeout(() => {
                         preloader.style.display = 'none';
                     }, 500); 
@@ -276,6 +279,7 @@
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
+           
             if (menuButton && mobileMenu) {
                 menuButton.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
@@ -298,22 +302,17 @@
             
             if (whatsappBtn) {
                 whatsappBtn.addEventListener('click', () => {
-                    // Get form values
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const service = document.getElementById('service').value;
-               const date = document.getElementById('date').value;
+                    const date = document.getElementById('date').value;
                     const time = document.getElementById('time').value;
 
-                    // Basic validation
                     if (!name || !email || !service || !date || !time) {
-                        // Replaced alert with a more user-friendly modal or inline message if possible
-                        // For simplicity, we'll keep alert, but this is a good place to improve
                         alert('Please fill in all fields before sending.');
                         return;
                     }
 
-                    // Format the message
                     const message = `Hello Haven International Spa,
 
 I'd like to book an appointment.
@@ -325,18 +324,13 @@ I'd like to book an appointment.
 
 Please confirm my booking.`;
 
-                    // Your WhatsApp number (from the floating button)
                     const whatsappNumber = '919108238201'; 
-                    
-                    // Create the WhatsApp URL
                     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-                    
-                    // Open in a new tab
                     window.open(whatsappURL, '_blank');
                 });
             }
 
-            // --- 5. Dynamic Copyright Year (Fixed) ---
+            // --- 5. Dynamic Copyright Year ---
             const yearSpan = document.getElementById('current-year');
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
@@ -346,4 +340,3 @@ Please confirm my booking.`;
     </script>
     </body>
 </html>
-
