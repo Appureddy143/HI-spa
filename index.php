@@ -265,21 +265,31 @@
         document.addEventListener('DOMContentLoaded', function() {
             
             // --- 1. Preloader Functionality ---
-            window.addEventListener('load', () => {
-                const preloader = document.getElementById('preloader');
-                if (preloader) {
+            const preloader = document.getElementById('preloader');
+            let preloaderHidden = false; // Flag to prevent running twice
+
+            const hidePreloader = () => {
+                if (preloader && !preloaderHidden) {
+                    preloaderHidden = true; // Set flag
                     preloader.style.opacity = '0';
                     setTimeout(() => {
                         preloader.style.display = 'none';
-                    }, 500); 
+                    }, 500); // Match CSS transition
                 }
-            });
+            };
 
+            // A) Try to hide it on 'load' (the ideal way)
+            window.addEventListener('load', hidePreloader);
+
+              // B) Failsafe: Hide it after 3 seconds anyway
+            // This handles cases where 'load' might not fire (e.g., a broken image link)
+            setTimeout(hidePreloader, 3000);
+
+            
             // --- 2. Mobile Menu Toggle ---
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
-           
             if (menuButton && mobileMenu) {
                 menuButton.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
@@ -309,7 +319,8 @@
                     const time = document.getElementById('time').value;
 
                     if (!name || !email || !service || !date || !time) {
-                        alert('Please fill in all fields before sending.');
+                        // Replaced alert() with console.warn() which is non-blocking
+                        console.warn('Please fill in all fields before sending.');
                         return;
                     }
 
