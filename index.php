@@ -118,7 +118,52 @@
     .fab{width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;box-shadow:0 10px 24px rgba(2,6,23,0.12);transition:transform .14s}
     .fab:active{transform:scale(.98)}
     .fab.wh{background:#25D366} /* whatsapp green */
-    .fab.call{background:#0ea5e9} /* call blue */
+    .fab.call{background:#0ea5e9} /* call bl/* ===== MOBILE MENU BASE ===== */
+#mobileMenu {
+  background: var(--card, #fff);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  padding: 12px 20px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-15px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show menu */
+#mobileMenu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Menu links */
+#mobileMenu a {
+  display: block;
+  padding: 10px 0;
+  color: var(--text, #222);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#mobileMenu a:hover {
+  color: #166534; /* Spa green tone */
+  transform: translateX(5px);
+}
+
+/* Dark mode support */
+body.dark #mobileMenu {
+  background: #1e1e1e;
+}
+body.dark #mobileMenu a {
+  color: #f1f1f1;
+}ue */
 
     /* Preloader (CSS spinner) */
     #preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--card);z-index:9999}
@@ -145,83 +190,26 @@
     }
   </style>
   <style>
-  /* ===== MOBILE MENU STYLING ===== */
-  #mobileMenu {
-    background: var(--card, #ffffff);
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 12px 20px;
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(-15px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  /* When active, show smoothly */
-  #mobileMenu.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
-  }
-
-  #mobileMenu a {
-    display: block;
-    padding: 10px 0;
-    color: var(--text, #333);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-
-  #mobileMenu a:hover {
-    color: #166534; /* Spa green tone */
-    transform: translateX(5px);
-  }
-
-  /* ===== ANIMATIONS ===== */
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-  }
+  
   </style>
   <script>
-  const menuBtn = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
 
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('active')) {
-        // play slide up animation before hiding
-        mobileMenu.style.animation = 'slideUp 0.3s ease forwards';
-        setTimeout(() => mobileMenu.classList.remove('active'), 300);
-      } else {
-        mobileMenu.classList.add('active');
-        mobileMenu.style.animation = 'slideDown 0.3s ease forwards';
-      }
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+
+    // Auto close when link clicked
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
     });
   }
+});
   </script>
 </head>
 <body>
@@ -258,15 +246,21 @@
       </div>
     </div>
 
-    <!-- mobile menu -->
-    <div id="mobileMenu" style="display:none;background:var(--card);padding:12px 20px">
-      <a href="#home" style="display:block;padding:8px 0">Home</a>
-      <a href="#services" style="display:block;padding:8px 0">Services</a>
-      <a href="#about" style="display:block;padding:8px 0">About</a>
-      <a href="#gallery" style="display:block;padding:8px 0">Gallery</a>
-      <a href="#contact" style="display:block;padding:8px 0">Contact</a>
-    </div>
-  </header>
+<!-- mobile menu toggle button -->
+<button id="menuToggle" 
+        aria-label="Toggle menu" 
+        style="background:none;border:none;font-size:1.8rem;cursor:pointer;">
+  ☰
+</button>
+
+<!-- mobile menu -->
+<div id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</div>
 
   <!-- ========== HERO ========== -->
 <section id="home" class="hero" aria-label="Hero" 
