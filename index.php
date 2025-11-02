@@ -277,21 +277,21 @@
 
       <div class="grid gallery-grid" style="grid-template-columns:repeat(4,1fr);gap:12px">
         <div class="col reveal">
-          <img src="Assets/g1.png" alt="Gallery 1">
-          <img src="Assets/g2.png" alt="Gallery 2">
+          <img src="assets/g1.png" alt="Gallery 1">
+          <img src="assets/g2.png" alt="Gallery 2">
         </div>
         <div class="col reveal">
-          <img src="Assets/g3.png" alt="Gallery 3">
-          <img src="Assets/g4.png" alt="Gallery 4">
+          <img src="assets/g3.png" alt="Gallery 3">
+          <img src="assets/g4.png" alt="Gallery 4">
         </div>
         <div class="col reveal">
-          <img src="Assets/g5.png" alt="Gallery 5">
-          <img src="Assets/g6.png" alt="Gallery 6">
+          <img src="assets/g5.png" alt="Gallery 5">
+          <img src="assets/g6.png" alt="Gallery 6">
         </div>
         <div class="col reveal">
           <!-- repeat or decorative -->
-          <img src="Assets/g2.png" alt="Gallery extra">
-          <img src="Assets/g1.png" alt="Gallery extra 2">
+          <img src="assets/g2.png" alt="Gallery extra">
+          <img src="assets/g1.png" alt="Gallery extra 2">
         </div>
       </div>
     </div>
