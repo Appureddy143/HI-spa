@@ -190,13 +190,29 @@
   </header>
 
   <!-- ========== HERO ========== -->
-  <section id="home" class="hero" aria-label="Hero">
-    <div class="hero-card reveal">
-      <h2>Experience True Tranquility</h2>
-      <p>Rediscover your inner peace in our oasis of calm. Your journey to relaxation starts here.</p>
-      <a class="btn" href="#contact">Book An Appointment</a>
-    </div>
-  </section>
+<section id="home" class="hero" aria-label="Hero" 
+  style="
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('assets/back.png') center center / cover no-repeat;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  ">
+  <div class="hero-card reveal" style="max-width: 700px; backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px;">
+    <h2 style="font-size: 2.8rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Experience True Tranquility</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Rediscover your inner peace in our oasis of calm. Your journey to relaxation starts here.</p>
+    <a class="btn" href="#contact" 
+      style="background-color: #166534; color: #fff; padding: 0.75rem 2rem; border-radius: 9999px; font-weight: bold; transition: transform 0.3s ease, background-color 0.3s ease;">
+      Book An Appointment
+    </a>
+  </div>
+</section>
+
 
 <!-- ========== SERVICES ========== -->
 <section id="services">
@@ -227,7 +243,7 @@
 
       <!-- card 3 -->
       <article class="card reveal">
-        <img src="assets/s3.jpeg" alt="Hot Stone Therapy" loading="lazy">
+        <img src="assets/s3.jpeg.webp" alt="Hot Stone Therapy" loading="lazy">
         <div class="card-body">
           <h3>Hot Stone Therapy</h3>
           <p>Heated stones are placed on the body to soothe muscles and relieve stress.</p>
@@ -267,7 +283,7 @@
   <!-- ========== ABOUT ========== -->
   <section id="about" style="background:rgba(20,83,45,0.04)">
     <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center">
-      <div class="reveal"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2070&auto=format&fit=crop" alt="Spa interior" style="width:100%;border-radius:12px;display:block"></div>
+      <div class="reveal"><img src="assets/spa.jpg" alt="Spa interior" style="width:100%;border-radius:12px;display:block"></div>
       <div class="reveal">
         <h3 class="section-title">Your Sanctuary for Wellness</h3>
         <p class="muted">Welcome to Haven International Spa, where we believe in the power of touch and the art of relaxation. Our mission is to provide a peaceful escape from the demands of everyday life.</p>
@@ -409,8 +425,7 @@
         preloader.style.opacity = '0';
         setTimeout(()=> { preloader.style.display='none'; }, 650);
       }
-
-      // Mobile menu toggle
+    // Mobile menu toggle
       if(mobileMenuBtn && mobileMenu){
         mobileMenuBtn.addEventListener('click', function(){
           const shown = mobileMenu.style.display === 'block';
