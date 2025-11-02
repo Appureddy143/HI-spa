@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Re-added Content Security Policy for security -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.tailwindcss.com; 
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; 
+        font-src 'self' https://fonts.gstatic.com; 
+        img-src 'self' https://images.unsplash.com;
+        frame-ancestors 'none';
+    ">
     <title>Haven International Spa - Your Oasis of Tranquility</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -229,10 +238,18 @@
         </div>
     </footer>
 
+    <!-- Floating Action Buttons -->
     <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-4">
+        <!-- WhatsApp Button -->
         <a href="https://wa.me/919108238201?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.891-11.893 11.891-1.996 0-3.903-.52-5.586-1.455L.057 24zM6.591 19.911l.3.181c1.559.936 3.303 1.428 5.109 1.428 5.462 0 9.904-4.443 9.904-9.904 0-5.461-4.442-9.904-9.904-9.904-5.461 0-9.904 4.443-9.904 9.904 0 1.84.49 3.582 1.396 5.093l.203.341-1.015 3.714 3.79-1.003z"/>
+            </svg>
+        </a>
+        <!-- Call Button - ADDED BACK -->
+        <a href="tel:+919108238201" title="Call Us" class="bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
         </a>
     </div>
@@ -285,11 +302,13 @@
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const service = document.getElementById('service').value;
-                    const date = document.getElementById('date').value;
+               const date = document.getElementById('date').value;
                     const time = document.getElementById('time').value;
 
                     // Basic validation
                     if (!name || !email || !service || !date || !time) {
+                        // Replaced alert with a more user-friendly modal or inline message if possible
+                        // For simplicity, we'll keep alert, but this is a good place to improve
                         alert('Please fill in all fields before sending.');
                         return;
                     }
@@ -298,11 +317,11 @@
                     const message = `Hello Haven International Spa,
 
 I'd like to book an appointment.
-Name: ${name}
-Email: ${email}
-Service: ${service}
-Preferred Date: ${date}
-Preferred Time: ${time}
+*Name:* ${name}
+*Email:* ${email}
+*Service:* ${service}
+*Preferred Date:* ${date}
+*Preferred Time:* ${time}
 
 Please confirm my booking.`;
 
@@ -317,7 +336,7 @@ Please confirm my booking.`;
                 });
             }
 
-            // --- 5. Dynamic Copyright Year ---
+            // --- 5. Dynamic Copyright Year (Fixed) ---
             const yearSpan = document.getElementById('current-year');
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
@@ -327,3 +346,4 @@ Please confirm my booking.`;
     </script>
     </body>
 </html>
+
