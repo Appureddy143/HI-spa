@@ -200,7 +200,7 @@
       <div class="grid services-grid">
         <!-- card 1 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1512290923902-8a9f31c83659?q=80&w=2070&auto=format&fit=crop" alt="Swedish Massage">
+          <img src="https://allurethaispa.in/wp-content/uploads/2023/07/closeup-man-having-back-massage-during-spa-treatment-wellness-center-1-1.jpg" alt="Swedish Massage">
           <div class="card-body">
             <h3>Swedish Massage</h3>
             <p>A classic relaxing massage to ease muscle tension and improve circulation.</p>
@@ -209,7 +209,7 @@
 
         <!-- card 2 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" alt="Aromatherapy">
+          <img src="https://addlestonetherapy.co.uk/wp-content/uploads/2024/04/aromatherpay-massage-addlestone.png" alt="Aromatherapy">
           <div class="card-body">
             <h3>Aromatherapy</h3>
             <p>Uses essential oils to promote healing and a feeling of well-being.</p>
@@ -218,7 +218,7 @@
 
         <!-- card 3 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1974&auto=format&fit=crop" alt="Hot Stone Therapy">
+          <img src="https://www.jnmassage.co.uk/jn-massage-feering/wp-content/uploads/2023/02/hot-stone-massage-1.jpg" alt="Hot Stone Therapy">
           <div class="card-body">
             <h3>Hot Stone Therapy</h3>
             <p>Heated stones are placed on the body to soothe muscles and relieve stress.</p>
@@ -227,7 +227,7 @@
 
         <!-- card 4 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Deep Tissue Massage">
+          <img src="https://www.fisio.ae/wp-content/uploads/2024/11/Body-Draft_-Deep-Tissue-Massage_-TK-Health-Benefits-And-Risks_Img0.webp" alt="Deep Tissue Massage">
           <div class="card-body">
             <h3>Deep Tissue Massage</h3>
             <p>Targets deeper layers of muscle to release chronic knots and tension.</p>
@@ -236,7 +236,7 @@
 
         <!-- card 5 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Rejuvenating Facial">
+          <img src="https://i-media.vyaparify.com/vcards/blogs/97597/service_1722660474.png" alt="Rejuvenating Facial">
           <div class="card-body">
             <h3>Rejuvenating Facial</h3>
             <p>A custom facial to cleanse, exfoliate, and nourish the skin for a radiant glow.</p>
@@ -245,7 +245,7 @@
 
         <!-- card 6 -->
         <article class="card reveal">
-          <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=2070&auto=format&fit=crop" alt="Couples Package">
+          <img src="https://static.wixstatic.com/media/ab642b_ee577f9c19d84c19a92ef8796a20d3a4~mv2.png/v1/fill/w_520,h_712,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/ab642b_ee577f9c19d84c19a92ef8796a20d3a4~mv2.png" alt="Couples Package">
           <div class="card-body">
             <h3>Couples Package</h3>
             <p>Enjoy a relaxing massage side-by-side with a partner in our private suite.</p>
