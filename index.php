@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
+      default-src 'self' data: blob:;
       script-src 'self' https://cdn.tailwindcss.com;
       style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
       font-src 'self' https://fonts.gstatic.com;
-      img-src 'self' data: blob: https://images.unsplash.com https://placehold.co https://i.gifer.com https://cdn.dribbble.com;
+      img-src 'self' data: blob: https://images.unsplash.com https://placehold.co https://i.gifer.com https://cdn.dribbble.com https://cdn-icons-png.flaticon.com;
   ">
   <title>Haven International Spa - Your Oasis of Tranquility</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,30 +21,27 @@
     /* 🌿 Preloader */
     #preloader {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: #ffffff;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       z-index: 9999;
-      transition: opacity 0.5s ease-out;
+      transition: opacity 0.6s ease;
     }
-
     #preloader img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
       margin-bottom: 16px;
     }
-
     #preloader p {
       font-family: 'Playfair Display', serif;
       font-size: 1.25rem;
       color: #166534;
       animation: fadeIn 1.5s ease-in-out infinite alternate;
     }
-
     @keyframes fadeIn {
       from { opacity: 0.4; }
       to { opacity: 1; }
@@ -60,28 +57,27 @@
     .gallery-img {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
-
     .gallery-img:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+                  0 4px 6px -2px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- 🌿 Preloader -->
+  <!-- 🌸 SPA STYLE PRELOADER -->
   <div id="preloader">
-    <img src="https://i.gifer.com/ZZ5H.gif" alt="Spa Loading Animation">
-    <p>Preparing Your Oasis...</p>
+    <img src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/leaf_loader.gif" alt="Loading spa animation">
+    <p>Preparing your oasis...</p>
   </div>
 
-  <!-- ✅ Header -->
-  <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+  <!-- ✅ HEADER -->
+  <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3 text-2xl font-playfair font-bold text-gray-800">
-        <img src="https://placehold.co/32x32/166534/ffffff?text=H" alt="Haven Logo" class="h-8 w-8 rounded-full">
+        <img src="https://placehold.co/32x32/166534/ffffff?text=H" class="h-8 w-8 rounded-full" alt="Logo">
         <span>Haven International Spa</span>
       </a>
       <nav class="hidden md:flex space-x-8">
@@ -104,7 +100,7 @@
     </div>
   </header>
 
-  <!-- ✅ Hero -->
+  <!-- ✅ HERO -->
   <section id="home" class="hero-bg h-screen flex items-center justify-center">
     <div class="bg-black/40 text-white text-center p-12 rounded-lg max-w-2xl mx-auto">
       <h1 class="text-5xl md:text-6xl font-playfair font-bold mb-4">Experience True Tranquility</h1>
@@ -113,7 +109,7 @@
     </div>
   </section>
 
-  <!-- ✅ Services (shortened for clarity) -->
+  <!-- ✅ SERVICES -->
   <section id="services" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-playfair font-bold text-center mb-6">Our Signature Services</h2>
@@ -135,13 +131,13 @@
     </div>
   </section>
 
-  <!-- ✅ Footer -->
+  <!-- ✅ FOOTER -->
   <footer class="bg-gray-800 text-white py-12 text-center">
     <p class="text-2xl font-playfair font-bold mb-2">Haven International Spa</p>
     <p class="text-gray-400">&copy; <span id="year"></span> Haven International Spa</p>
   </footer>
 
-  <!-- ✅ Script -->
+  <!-- ✅ JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const preloader = document.getElementById('preloader');
@@ -151,12 +147,16 @@
         if (!preloaderHidden) {
           preloaderHidden = true;
           preloader.style.opacity = '0';
-          setTimeout(() => preloader.style.display = 'none', 500);
+          setTimeout(() => preloader.style.display = 'none', 600);
         }
       }
 
+      // Hide when loaded
       window.addEventListener('load', hidePreloader);
+      // Failsafe (after 3s)
       setTimeout(hidePreloader, 3000);
+
+      // Year
       document.getElementById('year').textContent = new Date().getFullYear();
     });
   </script>
