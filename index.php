@@ -149,7 +149,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="#">
-          <img src="Assets/logo.png" alt="Haven logo">
+          <img src="assets/logo.png" alt="Haven logo">
           <h1>Haven International Spa</h1>
         </a>
 
