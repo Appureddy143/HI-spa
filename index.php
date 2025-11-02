@@ -65,10 +65,7 @@
     nav.desktop a{color:var(--muted);text-decoration:none;font-weight:500}
     nav.desktop a:hover{color:var(--accent)}
 
-    /* Mobile menu button */
-    .mobile-btn{display:none;background:none;border:0;padding:6px;border-radius:8px;cursor:pointer}
-    .mobile-btn svg{width:22px;height:22px;display:block;color:var(--text)}
-
+    
     /* Hero */
     .hero{
       height:100vh;display:flex;align-items:center;justify-content:center;padding:40px;
