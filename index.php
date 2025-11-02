@@ -337,9 +337,8 @@
     <div class="container">
       <p style="font-family:'Playfair Display',serif;font-size:20px;margin:0 0 12px">Haven International Spa</p>
       <div style="margin-bottom:12px">
-        <a href="#" style="margin-right:16px;color:var(--muted)">Facebook</a>
+        <a href="#" style="margin-right:16px;color:var(--muted)">Youtube</a>
         <a href="#" style="margin-right:16px;color:var(--muted)">Instagram</a>
-        <a href="#" style="color:var(--muted)">Twitter</a>
       </div>
       <div style="color:var(--muted)">&copy; <span id="year"></span> Haven International Spa. All Rights Reserved.</div>
     </div>
